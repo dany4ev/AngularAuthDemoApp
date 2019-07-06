@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>ExpressRestApi</Name>
+    <RootNamespace>ExpressRestApi</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>95f00e70-fcc3-49c6-ad82-e81d0fda9f8d</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app.js" />
+    <Content Include="routes\index.js" />
+    <Content Include="routes\users.js" />
+    <Content Include="package.json" />
+    <Content Include="public\stylesheets\main.css" />
+    <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="routes\" />
+    <Folder Include="AngularAdminPortal\" />
+    <Folder Include="AngularAdminPortal\e2e\" />
+    <Folder Include="AngularAdminPortal\e2e\src\" />
+    <Folder Include="AngularAdminPortal\src\" />
+    <Folder Include="AngularAdminPortal\src\app\" />
+    <Folder Include="AngularAdminPortal\src\app\access-denied\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\blank-page\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\bs-component\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\bs-component\components\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\bs-component\components\alert\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\bs-component\components\buttons\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\bs-component\components\collapse\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\bs-component\components\date-picker\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\bs-component\components\dropdown\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\bs-component\components\modal\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\bs-component\components\pagination\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\bs-component\components\pop-over\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\bs-component\components\progressbar\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\bs-component\components\rating\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\bs-component\components\tabs\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\bs-component\components\timepicker\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\bs-component\components\tooltip\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\bs-element\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\charts\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\components\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\components\header\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\components\sidebar\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\dashboard\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\dashboard\components\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\dashboard\components\chat\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\dashboard\components\notification\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\dashboard\components\timeline\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\form\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\grid\" />
+    <Folder Include="AngularAdminPortal\src\app\layout\tables\" />
+    <Folder Include="AngularAdminPortal\src\app\login\" />
+    <Folder Include="AngularAdminPortal\src\app\not-found\" />
+    <Folder Include="AngularAdminPortal\src\app\server-error\" />
+    <Folder Include="AngularAdminPortal\src\app\shared\" />
+    <Folder Include="AngularAdminPortal\src\app\shared\guard\" />
+    <Folder Include="AngularAdminPortal\src\app\shared\modules\" />
+    <Folder Include="AngularAdminPortal\src\app\shared\modules\language-translation\" />
+    <Folder Include="AngularAdminPortal\src\app\shared\modules\page-header\" />
+    <Folder Include="AngularAdminPortal\src\app\shared\modules\stat\" />
+    <Folder Include="AngularAdminPortal\src\app\shared\pipes\" />
+    <Folder Include="AngularAdminPortal\src\app\shared\services\" />
+    <Folder Include="AngularAdminPortal\src\app\signup\" />
+    <Folder Include="AngularAdminPortal\src\assets\" />
+    <Folder Include="AngularAdminPortal\src\assets\i18n\" />
+    <Folder Include="AngularAdminPortal\src\assets\images\" />
+    <Folder Include="AngularAdminPortal\src\environments\" />
+    <Folder Include="AngularAdminPortal\src\styles\" />
+    <Folder Include="AngularAdminPortal\src\styles\bootstrap\" />
+    <Folder Include="AngularAdminPortal\src\styles\bootstrap\mixins\" />
+    <Folder Include="AngularAdminPortal\src\styles\bootstrap\utilities\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AngularAdminPortal\.angulardoc.json" />
+    <Content Include="AngularAdminPortal\.editorconfig" />
+    <Content Include="AngularAdminPortal\.gitignore" />
+    <Content Include="AngularAdminPortal\.travis.yml" />
+    <Content Include="AngularAdminPortal\angular.json" />
+    <Content Include="AngularAdminPortal\browserslist" />
+    <Content Include="AngularAdminPortal\e2e\tsconfig.e2e.json" />
+    <Content Include="AngularAdminPortal\LICENSE" />
+    <Content Include="AngularAdminPortal\package.json" />
+    <Content Include="AngularAdminPortal\README.md" />
+    <Content Include="AngularAdminPortal\src\app\access-denied\access-denied.component.html" />
+    <Content Include="AngularAdminPortal\src\app\access-denied\access-denied.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\app.component.html" />
+    <Content Include="AngularAdminPortal\src\app\app.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\blank-page\blank-page.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\blank-page\blank-page.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\bs-component.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\bs-component.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\alert\alert.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\alert\alert.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\buttons\buttons.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\buttons\buttons.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\collapse\collapse.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\collapse\collapse.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\date-picker\date-picker.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\date-picker\date-picker.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\dropdown\dropdown.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\dropdown\dropdown.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\modal\modal.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\modal\modal.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\pagination\pagination.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\pagination\pagination.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\pop-over\pop-over.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\pop-over\pop-over.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\progressbar\progressbar.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\progressbar\progressbar.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\rating\rating.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\rating\rating.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\tabs\tabs.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\tabs\tabs.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\timepicker\timepicker.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\timepicker\timepicker.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\tooltip\tooltip.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-component\components\tooltip\tooltip.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-element\bs-element.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\bs-element\bs-element.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\charts\charts.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\charts\charts.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\components\header\header.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\components\header\header.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\components\sidebar\sidebar.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\components\sidebar\sidebar.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\dashboard\components\chat\chat.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\dashboard\components\chat\chat.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\dashboard\components\notification\notification.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\dashboard\components\notification\notification.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\dashboard\components\timeline\timeline.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\dashboard\components\timeline\timeline.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\dashboard\dashboard.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\dashboard\dashboard.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\form\form.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\form\form.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\grid\grid.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\grid\grid.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\layout.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\layout.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\layout\tables\tables.component.html" />
+    <Content Include="AngularAdminPortal\src\app\layout\tables\tables.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\login\login.component.html" />
+    <Content Include="AngularAdminPortal\src\app\login\login.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\not-found\not-found.component.html" />
+    <Content Include="AngularAdminPortal\src\app\not-found\not-found.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\server-error\server-error.component.html" />
+    <Content Include="AngularAdminPortal\src\app\server-error\server-error.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\shared\modules\page-header\page-header.component.html" />
+    <Content Include="AngularAdminPortal\src\app\shared\modules\page-header\page-header.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\shared\modules\stat\stat.component.html" />
+    <Content Include="AngularAdminPortal\src\app\shared\modules\stat\stat.component.scss" />
+    <Content Include="AngularAdminPortal\src\app\signup\signup.component.html" />
+    <Content Include="AngularAdminPortal\src\app\signup\signup.component.scss" />
+    <Content Include="AngularAdminPortal\src\assets\i18n\de.json" />
+    <Content Include="AngularAdminPortal\src\assets\i18n\en.json" />
+    <Content Include="AngularAdminPortal\src\assets\i18n\es.json" />
+    <Content Include="AngularAdminPortal\src\assets\i18n\fa.json" />
+    <Content Include="AngularAdminPortal\src\assets\i18n\fr.json" />
+    <Content Include="AngularAdminPortal\src\assets\i18n\it.json" />
+    <Content Include="AngularAdminPortal\src\assets\i18n\ur.json" />
+    <Content Include="AngularAdminPortal\src\assets\i18n\zh-CHS.json" />
+    <Content Include="AngularAdminPortal\src\assets\images\logo.png" />
+    <Content Include="AngularAdminPortal\src\assets\images\slider1.jpg" />
+    <Content Include="AngularAdminPortal\src\assets\images\slider2.jpg" />
+    <Content Include="AngularAdminPortal\src\assets\images\slider3.jpg" />
+    <Content Include="AngularAdminPortal\src\favicon.ico" />
+    <Content Include="AngularAdminPortal\src\index.html" />
+    <Content Include="AngularAdminPortal\src\karma.conf.js" />
+    <Content Include="AngularAdminPortal\src\styles\app.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\bootstrap-grid.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\bootstrap.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_alert.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_badge.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_buttons.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_caret.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_float.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_forms.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_gradients.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_grid.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_hover.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_image.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_list-group.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_lists.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_navbar-align.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_pagination.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_resize.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_size.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_table-row.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_transition.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\mixins\_visibility.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\utilities\_align.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\utilities\_background.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\utilities\_borders.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\utilities\_display.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\utilities\_embed.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\utilities\_flex.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\utilities\_float.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\utilities\_position.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\utilities\_sizing.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\utilities\_spacing.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\utilities\_text.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\utilities\_visibility.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_alert.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_badge.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_breadcrumb.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_button-group.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_buttons.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_card.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_carousel.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_close.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_code.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_custom-forms.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_dropdown.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_forms.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_functions.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_grid.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_images.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_input-group.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_jumbotron.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_list-group.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_media.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_mixins.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_modal.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_nav.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_navbar.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_pagination.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_popover.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_print.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_progress.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_reboot.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_root.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_tables.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_tooltip.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_transitions.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_type.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_utilities.scss" />
+    <Content Include="AngularAdminPortal\src\styles\bootstrap\_variables.scss" />
+    <Content Include="AngularAdminPortal\src\styles\_responsive.scss" />
+    <Content Include="AngularAdminPortal\src\styles\_rtl.scss" />
+    <Content Include="AngularAdminPortal\src\styles\_spinner.scss" />
+    <Content Include="AngularAdminPortal\src\styles\_utils.scss" />
+    <Content Include="AngularAdminPortal\src\tsconfig.app.json" />
+    <Content Include="AngularAdminPortal\src\tsconfig.spec.json" />
+    <Content Include="AngularAdminPortal\tsconfig.json" />
+    <Content Include="AngularAdminPortal\tslint.json" />
+    <Content Include="AngularAdminPortal\yarn.lock" />
+    <Content Include="views\error.ejs" />
+    <Content Include="views\index.ejs" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="AngularAdminPortal\e2e\src\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\e2e\src\app.po.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\access-denied\access-denied-routing.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\access-denied\access-denied.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\access-denied\access-denied.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\access-denied\access-denied.module.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\access-denied\access-denied.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\app.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\app.module.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\app.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\blank-page\blank-page-routing.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\blank-page\blank-page.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\blank-page\blank-page.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\blank-page\blank-page.module.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\blank-page\blank-page.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\bs-component-routing.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\bs-component.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\bs-component.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\bs-component.module.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\bs-component.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\alert\alert.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\alert\alert.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\buttons\buttons.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\buttons\buttons.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\collapse\collapse.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\collapse\collapse.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\date-picker\date-picker.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\date-picker\date-picker.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\dropdown\dropdown.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\dropdown\dropdown.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\index.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\modal\modal.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\modal\modal.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\pagination\pagination.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\pagination\pagination.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\pop-over\pop-over.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\pop-over\pop-over.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\progressbar\progressbar.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\progressbar\progressbar.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\rating\rating.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\rating\rating.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\tabs\tabs.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\tabs\tabs.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\timepicker\timepicker.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\timepicker\timepicker.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\tooltip\tooltip.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-component\components\tooltip\tooltip.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-element\bs-element-routing.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-element\bs-element.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-element\bs-element.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-element\bs-element.module.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\bs-element\bs-element.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\charts\charts-routing.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\charts\charts.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\charts\charts.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\charts\charts.module.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\charts\charts.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\components\header\header.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\components\header\header.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\components\sidebar\sidebar.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\components\sidebar\sidebar.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\dashboard\components\chat\chat.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\dashboard\components\chat\chat.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\dashboard\components\index.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\dashboard\components\notification\notification.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\dashboard\components\notification\notification.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\dashboard\components\timeline\timeline.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\dashboard\components\timeline\timeline.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\dashboard\dashboard-routing.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\dashboard\dashboard.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\dashboard\dashboard.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\dashboard\dashboard.module.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\dashboard\dashboard.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\form\form-routing.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\form\form.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\form\form.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\form\form.module.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\form\form.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\grid\grid-routing.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\grid\grid.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\grid\grid.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\grid\grid.module.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\grid\grid.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\layout-routing.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\layout.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\layout.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\layout.module.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\layout.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\tables\tables-routing.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\tables\tables.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\tables\tables.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\tables\tables.module.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\layout\tables\tables.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\login\login-routing.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\login\login.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\login\login.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\login\login.module.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\login\login.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\not-found\not-found-routing.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\not-found\not-found.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\not-found\not-found.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\not-found\not-found.module.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\not-found\not-found.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\router.animations.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\server-error\server-error-routing.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\server-error\server-error.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\server-error\server-error.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\server-error\server-error.module.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\server-error\server-error.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\shared\guard\auth.guard.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\shared\guard\auth.guard.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\shared\guard\index.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\shared\index.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\shared\modules\index.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\shared\modules\language-translation\language-translation.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\shared\modules\page-header\page-header.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\shared\modules\page-header\page-header.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\shared\modules\page-header\page-header.module.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\shared\modules\page-header\page-header.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\shared\modules\stat\stat.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\shared\modules\stat\stat.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\shared\modules\stat\stat.module.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\shared\modules\stat\stat.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\shared\pipes\shared-pipes.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\shared\services\index.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\signup\signup-routing.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\signup\signup.component.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\signup\signup.component.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\signup\signup.module.spec.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\app\signup\signup.module.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\environments\environment.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\main.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\polyfills.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\test.ts" />
+    <TypeScriptCompile Include="AngularAdminPortal\src\typings.d.ts" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
