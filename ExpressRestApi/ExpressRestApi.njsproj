@@ -103,7 +103,6 @@
   <ItemGroup>
     <Content Include="AngularAdminPortal\.angulardoc.json" />
     <Content Include="AngularAdminPortal\.editorconfig" />
-    <Content Include="AngularAdminPortal\.gitignore" />
     <Content Include="AngularAdminPortal\.travis.yml" />
     <Content Include="AngularAdminPortal\angular.json" />
     <Content Include="AngularAdminPortal\browserslist" />
