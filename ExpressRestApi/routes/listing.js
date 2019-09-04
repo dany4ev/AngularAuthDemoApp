@@ -22,8 +22,4 @@ router.post('/', function (req, res) {
     res.send(`Got a POST request ${JSON.stringify(req)}`);
 });
 
-router.update('/:id', function (req, res) {
-    res.send(`Got a UPDATE request at /user/:${req.params.id}`);
-});
-
 module.exports = router;
